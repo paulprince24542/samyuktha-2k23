@@ -2,11 +2,12 @@
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("event");
 
+
+//Test
 //Defining Rules
 const nisaram = `
 <li class="pb-3">A team can have 2-4 members.</li>
 <li class="pb-3">The decision of the judging panel will be final.</li>
-<li class="pb-3">There is no spot registration for this event.</li>
 <li class="pb-3">The organizing committee has the rights to make changes to the event.</li>
 <li class="pb-3">The event is only for PG and UG students other than Engineering stream.</li>
 <li class="pb-3">All teams should bring their own Laptops and other required Gadgets.</li>
@@ -30,7 +31,6 @@ idea.</li>
 
 const sankalpam = `
 <li class="pb-3">The competition is about designing the layout of a website based on a theme.</li>
-<li class="pb-3">Team event consist of maximum 2 members per team.</li>
 <li class="pb-3">Participants will have to finish their coding within 2 hours.</li>
 <li class="pb-3">Use of internet and any kind of storage medium is strictly prohibited.</li>
 <li class="pb-3">There will be 2 rounds, Based on number of participants :</li>
@@ -50,9 +50,9 @@ Science students.</li>
 const samarthyaShasthram = `
 <li class="pb-3">Each team comprises 2 to 4 members.</li>
 <li class="pb-3">The team members cannot change their team.</li>
-<li class="pb-3">Participants should carry their college ID card.</li>
+<li class="pb-3">Participant should carry their college ID card.</li>
 <li class="pb-3">The clues are to be found in a particular order. Manipulation of the clues will lead to
-disqualification. The participants do not have the right to replace or manipulate others
+disqualification. The participant do not have the right to replace or manipulate others
 clues.</li>
 <li class="pb-3">Organizers have the right to disqualify the teams on the grounds of misbehaviour and the
 use of unfair means. Their decision is final and not subject to dispute.</li>
@@ -135,7 +135,6 @@ const swaralayam = `
 <li class="pb-3">Only registered students will be allowed to participate.</li>
 <li class="pb-3">No accompanying instruments will be allowed.</li>
 <li class="pb-3">Time limit for performance is 5 minutes.</li>
-<li class="pb-3">Microphone will not be allowed for the performance.</li>
 <li class="pb-3">Repetition of songs will not be allowed.</li>
 <li class="pb-3">Participant must use karoke for performance.</li>
 <li class="pb-3">Events will be conducted in 2 rounds:</li>
@@ -275,7 +274,7 @@ if (eventId === "8") {
 } else if (eventId === "9") {
   eventName.innerHTML = "Nisaram";
   eventType = "group";
-  maxSize = 4;
+  maxSize = 3;
   eventDesc.innerText = "(Ideathon)";
   eventContact.innerHTML = `
         <i class="fa-solid fa-phone yellow pe-1"></i>
@@ -296,7 +295,7 @@ if (eventId === "8") {
 } else if (eventId === "4") {
   eventName.innerHTML = "Samarthya Shasthram";
   eventType = "group";
-  maxSize = 4;
+  maxSize = 3;
   eventDesc.innerText = "(Treasure Hunt)";
   eventContact.innerHTML = `
         <i class="fa-solid fa-phone yellow pe-1"></i>
@@ -317,7 +316,7 @@ if (eventId === "8") {
 } else if (eventId === "12") {
   eventName.innerHTML = "Thaalam";
   eventType = "group";
-  maxSize = 7;
+  maxSize = 6;
   eventDesc.innerText = "(Best Choreo)";
   eventContact.innerHTML = `
         <i class="fa-solid fa-phone yellow pe-1"></i>

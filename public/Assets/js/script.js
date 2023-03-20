@@ -1,39 +1,42 @@
-var home = document.getElementById('home');
-var about = document.getElementById('about');
-var events = document.getElementById('events');
-var contact = document.getElementById('contact');
+var homeNav = document.getElementById('home-nav');
+var aboutNav = document.getElementById('about-nav');
+var eventsNav = document.getElementById('events-nav');
+var contactNav = document.getElementById('contact-nav');
 
-home.onclick = () => {
+homeNav.onclick = () => {
     var active = document.getElementsByClassName('active')[0];
-    // console.log(active);
-    if (active.id != 'home') {
-        // console.log("flj");
+    if (active.id != 'home-nav') {
         active.classList.remove('active');
-        home.classList.add('active');
+        homeNav.classList.add('active');
+        window.scrollTo(0, 0)
     }
 }
 
-about.onclick = () => {
+aboutNav.onclick = () => {
     var active = document.getElementsByClassName('active')[0];
-    if (active.id != 'about') {
+    if (active.id != 'about-nav') {
         active.classList.remove('active');
-        about.classList.add('active');
+        aboutNav.classList.add('active');
+        window.scrollTo(0, 700)
+
     }
 }
 
-events.onclick = () => {
+eventsNav.onclick = () => {
     var active = document.getElementsByClassName('active')[0];
-    if (active.id != 'events') {
+    if (active.id != 'events-nav') {
         active.classList.remove('active');
-        events.classList.add('active');
+        eventsNav.classList.add('active');
+        window.scrollTo(0, 1300)
+
     }
 }
 
-contact.onclick = () => {
+contactNav.onclick = () => {
     var active = document.getElementsByClassName('active')[0];
-    if (active.id != 'contact') {
+    if (active.id != 'contact-nav') {
         active.classList.remove('active');
-        contact.classList.add('active');
+        contactNav.classList.add('active');
     }
 }
 function openNav() {
@@ -45,7 +48,11 @@ function closeNav() {
     const nav = document.getElementById('nav')
     nav.style.transform = "translateX(150%)";
 }
-
+window.onclick = () => {
+    const nav = document.getElementById('nav')
+    if (nav.style.transform == '35%')
+        nav.style.transform = "translateX(150%)";
+}
 function navBg() {
     const header = document.getElementById('header')
     let scroll = window.scrollY;
@@ -55,8 +62,8 @@ function navBg() {
         header.style.background = "transparent"
 }
 
-function  customiseSubmit(sub){
-    //console.log('g');
+function customiseSubmit(sub) {
+    console.log('g');
     sub.classList.remove('btn-outline')
     sub.classList.add('btn-light')
 }
