@@ -133,7 +133,6 @@ const swaralayam = `
 <li class="pb-3">Only registered students will be allowed to participate.</li>
 <li class="pb-3">No accompanying instruments will be allowed.</li>
 <li class="pb-3">Time limit for performance is 5 minutes.</li>
-<li class="pb-3">Microphone will not be allowed for the performance.</li>
 <li class="pb-3">Repetition of songs will not be allowed.</li>
 <li class="pb-3">Participant must use karoke for performance.</li>
 <li class="pb-3">Events will be conducted in 2 rounds:</li>
