@@ -2,6 +2,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("event");
 
+
+//Test
 //Defining Rules
 const nisaram = `
 <li class="pb-3">A team can have 2-4 members.</li>
