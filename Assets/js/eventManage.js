@@ -2,6 +2,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("event");
 
+//var URL = 'https://app-kkkthwlndq-uc.a.run.app'
+var URL = 'http://localhost:5000'
 
 //Test
 //Defining Rules
@@ -403,7 +405,7 @@ if (eventType === "single") {
     `;
 
   //Fetching pool
-  let url = `https://app-kkkthwlndq-uc.a.run.app/event/pool?eventid=${eventId}`;
+  let url = `${URL}/event/pool?eventid=${eventId}`;
   fetch(url)
     .then((response) => {
       return response.json();
@@ -509,7 +511,7 @@ $(document).ready(function () {
         (obj) => obj !== null
       );
       groupObj["eventid"] = eventId;
-      fetch("https://app-kkkthwlndq-uc.a.run.app/event/group/add", {
+      fetch(`${URL}/event/group/add`, {
         // Adding method type
         method: "POST",
 
@@ -552,7 +554,7 @@ $(document).ready(function () {
       var finalObject = Object.assign({}, formData, { events: events });
       //   console.log(finalObject);
 
-      fetch("https://app-kkkthwlndq-uc.a.run.app/event/single/add", {
+      fetch(`${URL}/event/single/add`, {
         // Adding method type
         method: "POST",
 
