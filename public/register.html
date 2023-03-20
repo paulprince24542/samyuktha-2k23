@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./Assets/css/mdb.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap JS-->
+    <script src="./Assets/js/mdb.min.js"></script>
+    <script src="./Assets/js/jquery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/validator.tool/dist/validator.min.js"
+    ></script>
+    <script src="./Assets/js/script.js" defer></script>
+    <script src="./Assets/js/scrollNav.js" defer></script>
+    <script src="./Assets/js/eventManage.js" defer></script>
+
+    <title>Samyuktha</title>
+  </head>
+
+  <body style="background: black">
+    <header class="wrapper" id="header">
+      <a href="./index.html" class="logo">samyuktha</a>
+      <nav id="nav">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="close"
+          onclick="closeNav()"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175V175zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"
+          />
+        </svg>
+        <ul>
+          <li>
+            <a href="index.html#home" class="active" id="home">Home</a>
+          </li>
+          <li>
+            <a href="index.html#about" id="about">About</a>
+          </li>
+          <li>
+            <a href="index.html#events" id="services">Events</a>
+          </li>
+          <li>
+            <a href="index.html#contact" id="contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <svg class="menu" viewBox="0 0 448 512" onclick="openNav()">
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+        />
+      </svg>
+    </header>
+    <div class="wrapper pt-5">
+      <main class="text-light pt-5">
+        <h1 class="text-center text-uppercase yellow pt-5" id="event_name"></h1>
+        <p id="event_desc" class="text-center text-light"></p>
+        <div class="row p-5">
+          <div class="col-md-6">
+            <h2 class="pb-5">Rules & Guidelines</h2>
+            <div class="row">
+              <ol id="rules"></ol>
+              <p id="event_contact" class="yellow"></p>
+              <div class="text-danger">
+                <p>Please Note:</p>
+                <ul>
+                  <li class="pb-3">
+                    Every Participant must bring their College ID card and
+                    participation badge with them, without ID card and badge
+                    participant will not be permitted to participate.
+                  </li>
+                  <li class="pb-3">
+                    The judging panel reserves the right to modify the judging
+                    criteria and the decisions of judges will be final.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr class="text-danger d-block d-sm-block d-md-none" />
+          <div
+            class="col-md-6 ps-md-5 border border-start-1 border-top-0 border-bottom-0 border-end-0 border-danger"
+            id="form-position"
+          >
+            <h2 class="pb-5">Register</h2>
+            <form id="register_form">
+              <div class="form-outline mb-4">
+                <input
+                  name="name"
+                  autocomplete="off"
+                  required
+                  type="text"
+                  id="form6Example3"
+                  class="form-control text-light border border-top-0 border-start-0 border-end-0 rounded-0 border-light"
+                />
+                <label class="form-label text-danger" for="form6Example3"
+                  >Name</label
+                >
+              </div>
+              <div class="form-outline mb-4">
+                <input
+                  name="email"
+                  autocomplete="off"
+                  required
+                  type="email"
+                  id="form6Example5"
+                  class="form-control text-light border border-top-0 border-start-0 border-end-0 rounded-0 border-light"
+                />
+                <label class="form-label text-danger" for="form6Example5"
+                  >Email</label
+                >
+              </div>
+              <div class="form-outline mb-4">
+                <input
+                  name="phone"
+                  autocomplete="off"
+                  required
+                  type="number"
+                  id="form6Example6"
+                  class="form-control text-light border border-top-0 border-start-0 border-end-0 rounded-0 border-light"
+                />
+                <label class="form-label text-danger" for="form6Example6"
+                  >Phone</label
+                >
+              </div>
+              <p class="yellow mb-4">Add Participant details</p>
+              <div id="add" class="w-100"></div>
+              <button
+                type="button"
+                id="add_btn"
+                class="btn btn-link btn-sm btn-rounded d-flex pt-4 bg-dark mb-4"
+                onclick="addTeam()"
+              >
+                <i class="fa-solid fa-plus yellow rounded-9"></i>
+                <p class="ms-2 yellow">Add Participant</p>
+              </button>
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <input
+                      name="course"
+                      autocomplete="off"
+                      required
+                      type="text"
+                      id="form6Example1"
+                      class="form-control text-light border border-top-0 border-start-0 border-end-0 rounded-0 border-light"
+                    />
+                    <label class="form-label text-danger" for="form6Example1"
+                      >Course</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <select
+                    name="year"
+                    class="pt-3 border border-top-0 border-start-0 border-end-0 border-light bg-black text-danger w-100 custom-select"
+                  >
+                    <option selected>Year</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-outline mb-4">
+                <input
+                  name="collegename"
+                  autocomplete="off"
+                  required
+                  type="text"
+                  id="form6Example3"
+                  class="form-control text-light border border-top-0 border-start-0 border-end-0 rounded-0 border-light"
+                />
+                <label class="form-label text-danger" for="form6Example3"
+                  >College name</label
+                >
+              </div>
+              <button
+                type="submit"
+                class="btn btn-outline-light btn-block mb-4 text-danger"
+                onmouseover="customiseSubmit(this)"
+              >
+                Register
+              </button>
+            </form>
+            <div id="reg" class="alert alert-success" role="alert">
+               Successfully Registered <br>
+               Confirmation mail has been send to registered email address.<br>
+               Please check your spam box for the email. <br>
+              </div>
+              <!-- <div class="alert alert-danger" role="alert">
+                Email is already in use
+              </div> -->
+          </div>
+        </div>
+        <!-- <form id="myform" class="form-wizard">
+          <h2 class="form-wizard-heading">BootStap Wizard Form</h2>
+          <input type="text" value="" />
+          <input type="submit" />
+        </form> -->
+
+       
+      </main>
+    </div>
+  </body>
+</html>
