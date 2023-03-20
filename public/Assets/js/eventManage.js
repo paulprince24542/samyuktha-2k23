@@ -273,7 +273,7 @@ if (eventId === "8") {
 } else if (eventId === "9") {
   eventName.innerHTML = "Nisaram";
   eventType = "group";
-  maxSize = 4;
+  maxSize = 3;
   eventDesc.innerText = "(Ideathon)";
   eventContact.innerHTML = `
         <i class="fa-solid fa-phone yellow pe-1"></i>
@@ -294,7 +294,7 @@ if (eventId === "8") {
 } else if (eventId === "4") {
   eventName.innerHTML = "Samarthya Shasthram";
   eventType = "group";
-  maxSize = 4;
+  maxSize = 3;
   eventDesc.innerText = "(Treasure Hunt)";
   eventContact.innerHTML = `
         <i class="fa-solid fa-phone yellow pe-1"></i>
@@ -315,7 +315,7 @@ if (eventId === "8") {
 } else if (eventId === "12") {
   eventName.innerHTML = "Thaalam";
   eventType = "group";
-  maxSize = 7;
+  maxSize = 6;
   eventDesc.innerText = "(Best Choreo)";
   eventContact.innerHTML = `
         <i class="fa-solid fa-phone yellow pe-1"></i>
