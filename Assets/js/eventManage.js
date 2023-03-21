@@ -3,8 +3,15 @@ const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("event");
 
 //var URL = 'https://app-kkkthwlndq-uc.a.run.app'
-var URL = 'http://localhost:5000'
+var URL = "http://localhost:5000";
 
+var errmsg = document.getElementById("errmsg");
+var spinner = document.getElementById("spinnerreg");
+var registersuccess = document.getElementById("reg");
+
+spinner.style.display = "none";
+errmsg.style.display = "none";
+registersuccess.style.display = "none";
 //Test
 //Defining Rules
 const nisaram = `
@@ -50,6 +57,8 @@ Science students.</li>
 `;
 
 const samarthyaShasthram = `
+<li class="pb-3">Theme: Kalaropangal</li>
+<li class="pb-3">Every rounds will be based on the following theme.</li>
 <li class="pb-3">Each team comprises 2 to 4 members.</li>
 <li class="pb-3">The team members cannot change their team.</li>
 <li class="pb-3">Participant should carry their college ID card.</li>
@@ -61,7 +70,7 @@ use of unfair means. Their decision is final and not subject to dispute.</li>
 <li class="pb-3">Use of mobile phones in between the competition is strictly prohibited.</li>
 <li class="pb-3">Interaction between other team members in between the competition is not allowed.</li>
 <li class="pb-3">The event will be organized in two rounds initially, there is a possibility of adding more
-rounds based on the number of participants.</li>
+rounds based on the number of participants and in each round there will be an elimination process</li>
 <li class="pb-3">The competition will consist of a series of clues, which will lead the teams to the location
 of the next clue. Each clue will be in the form of a riddle, a puzzle, a photo or a cryptic
 message. Teams will need to use their problem-solving skills and teamwork to solve the
@@ -83,7 +92,6 @@ competition.</li>
 
 const pariharaUg = `
 <li class="pb-3">Mobile device with internet connection is mandatory.</li>
-<li class="pb-3">Computer machine will be provided for the final round.</li>
 <li class="pb-3">The decision of the judging panel will be final.</li>
 <li class="pb-3">The organizing committee has the rights to make changes to the event.</li>
 <li class="pb-3">Event is only for UG students of non-engineering courses.</li>
@@ -98,7 +106,6 @@ const pariharaUg = `
 
 const pariharaPg = `
 <li class="pb-3">Mobile device with internet connection is mandatory.</li>
-<li class="pb-3">Computer machine will be provided for the final round.</li>
 <li class="pb-3">The decision of the judging panel will be final.</li>
 <li class="pb-3">The organizing committee has the rights to make changes to the event.</li>
 <li class="pb-3">The event is only for UG and PG students other than Engineering streams.</li>
@@ -485,6 +492,7 @@ document.getElementById("reg").style.display = "none";
 $(document).ready(function () {
   $("#register_form").submit(function (e) {
     e.preventDefault(); // prevent form submission
+    spinner.style.display = "block";
     if (eventType === "group") {
       var formArray = $(this).serializeArray();
       var groupObj = {};
@@ -529,7 +537,8 @@ $(document).ready(function () {
         // Displaying results to console
         .then((json) => {
           if (json.status == true) {
-            document.getElementById("reg").style.display = "block";
+            spinner.style.display = "none";
+            registersuccess.style.display = "block";
             setTimeout(() => {
               location.reload();
             }, 7000);
@@ -571,11 +580,20 @@ $(document).ready(function () {
 
         // Displaying results to console
         .then((json) => {
+          console.log(json);
+          if (json.err) {
+            registersuccess.style.display = "none";
+            errmsg.style.display = "block";
+            errmsg.innerHTML = json.err;
+            spinner.style.display = "none";
+          }
           if (json.status == true) {
-            document.getElementById("reg").style.display = "block";
+            spinner.style.display = "none";
+            registersuccess.style.display = "block";
+            errmsg.style.display = "none";
             setTimeout(() => {
               location.reload();
-            }, 7000);
+            }, 17000);
           }
         });
     }

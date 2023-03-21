@@ -107,6 +107,9 @@
                     The judging panel reserves the right to modify the judging
                     criteria and the decisions of judges will be final.
                   </li>
+                  <li class="pb-3">
+                    Based on number of participants the rounds of all events may vary
+                  </li>
                 </ul>
               </div>
             </div>
@@ -219,12 +222,24 @@
                 Register
               </button>
             </form>
-            <div id="reg" class="alert alert-success" role="alert">
-               Successfully Registered <br>
-               Confirmation mail has been send to registered email address.<br>
-               Please check your spam box for the email. <br>
+            <div class="d-flex justify-content-center">
+              <div
+                id="spinnerreg"
+                class="spinner-border text-danger"
+                role="status"
+              >
+                <span class="visually-hidden">Loading...</span>
               </div>
-              <!-- <div class="alert alert-danger" role="alert">
+            </div><br>
+            <div id="errmsg" class="alert alert-danger" role="alert">
+            </div>
+            <div id="reg" class=" alert alert-success" role="alert">
+              You have been successfully registered.<br>
+              Confirmation mail has been generated and send to the email.<br /> 
+              For more queries. Please contact the respective student cordinator.<br>
+              Thank You.
+            </div>
+            <!-- <div class="alert alert-danger" role="alert">
                 Email is already in use
               </div> -->
           </div>
@@ -233,7 +248,7 @@
           <h2 class="form-wizard-heading">BootStap Wizard Form</h2>
           <input type="text" value="" />
           <input type="submit" />
-        </form> -->    
+        </form> -->
       </main>
     </div>
   </body>
