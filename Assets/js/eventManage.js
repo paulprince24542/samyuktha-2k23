@@ -2,8 +2,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("event");
 
-//var URL = 'https://app-kkkthwlndq-uc.a.run.app'
-var URL = "http://localhost:5000";
+var URL = "https://app-kkkthwlndq-uc.a.run.app";
+//var URL = "http://localhost:5000";
 
 var errmsg = document.getElementById("errmsg");
 var spinner = document.getElementById("spinnerreg");
@@ -35,7 +35,7 @@ pose questions regarding the presentation.</li>
 idea.</li>
 <li class="pb-3">Rules are subjected to change by committee members if certain criteria(s) are not met.
 </li>
-
+<li class="pb-3"><b>Registeration Fee: 100</b></li>
 `;
 
 const sankalpam = `
@@ -54,6 +54,7 @@ const sankalpam = `
 <li class="pb-3">The event is only for MCA, BCA, M.SC Computer Science and B.SC Computer
 Science students.</li>
 <li class="pb-3">Decision of judges will be final .</li>
+<li class="pb-3"><b>Registeration Fee: 50</b></li>
 `;
 
 const samarthyaShasthram = `
@@ -88,6 +89,7 @@ correct answers will be declared the winner.</li>
 final.</li>
 <li class="pb-3">All teams must conduct themselves in a respectful and sportsmanlike manner during the
 competition.</li>
+<li class="pb-3"><b>Registeration Fee: 150</b></li>
 `;
 
 const pariharaUg = `
@@ -102,6 +104,7 @@ const pariharaUg = `
     <li class="pb-3">Final round - Problem solving in C/C++ language.</li>
 </ol>
 <li class="pb-3">Final round will be held within a computing facility of the college.</li>
+<li class="pb-3"><b>Registeration Fee: 50</b></li>
 `;
 
 const pariharaPg = `
@@ -115,6 +118,7 @@ const pariharaPg = `
 <li class="pb-3">Preliminary round - Aptitude test with 20 questions and Bugs removal in Java
 (Elimination)</li>
 <li class="pb-3">Final round - Problem solving in Java.</li>
+<li class="pb-3"><b>Registeration Fee: 50</b></li>
 `;
 
 const alpaneram = `
@@ -136,6 +140,7 @@ const alpaneram = `
 </ul>
 <li class="pb-3">Rules are subjected to change by committee members if certain criteria(s) are not met.
 </li>
+<li class="pb-3"><b>Registeration Fee: 30</b></li>
 `;
 
 const swaralayam = `
@@ -153,7 +158,7 @@ const swaralayam = `
 </ul>
 <li class="pb-3">Spot registration will be allowed.</li>
 <li class="pb-3">Participants must share the required music track for both rounds in mp3 format at least 45 minutes before commencement of rounds. </li>
-
+<li class="pb-3"><b>Registeration Fee: 50</b></li>
 `;
 
 const aatam = `
@@ -181,6 +186,7 @@ const aatam = `
 <li class="pb-3">Specific rules will be given before start of actual competition.</li>
 <li class="pb-3">Rules are subjected to change by committee members if certain criteria(s) are not met.</li>
 <li class="pb-3">There can be multiple entries from a college.</li>
+<li class="pb-3"><b>Registeration Fee: 50</b></li>
 `;
 
 const prathibha = `
@@ -193,6 +199,7 @@ electronic devices.</li>
 <li class="pb-3">The organizing committee takes the privilege of disqualifying a participant
 if he/she is found duplicitous.</li>
 <li class="pb-3">Further information will be provided at the time of the participation.</li>
+<li class="pb-3"><b>Registeration Fee: 50</b></li>
 `;
 
 const chithram = `
@@ -206,6 +213,7 @@ const chithram = `
 <li class="pb-3">Photos taken from inside the college premises are only allowed.</li>
 <li class="pb-3">The photograph should be submitted in jpeg format to the provided mail id.</li>
 <li class="pb-3">The contest duration will be from 10.30 am to 2.00 pm.</li>
+<li class="pb-3"><b>Registeration Fee: 30</b></li>
 `;
 
 const thaalam = `
@@ -218,6 +226,7 @@ const thaalam = `
 <li class="pb-3">Dance performance should not convey any indecent gestures.</li>
 <li class="pb-3"> The participants will be judged on the basis of their rhythm, formation, synchronization, expressions, and costumes, makeup, setup and overall effects.</li>
 <li class="pb-3">Decision of the judges will be final and binding.</li>
+<li class="pb-3"><b>Registeration Fee: 200</b></li>
 `;
 
 const rasikan = `
@@ -230,6 +239,7 @@ and sense of humor.</li>
 <li class="pb-3">Inappropriate & offensive contents, and dirty jokes will lead to disqualification.</li>
 <li class="pb-3">Participants can use Malayalam or English language.</li>
 <li class="pb-3">Specific rules will be given before start of actual competition.</li>
+<li class="pb-3"><b>Registeration Fee: 30</b></li>
 `;
 
 //Routing Rules
